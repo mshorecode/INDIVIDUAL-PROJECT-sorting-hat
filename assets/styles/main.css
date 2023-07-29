@@ -1,0 +1,20 @@
+#welcome .card {
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 20px 0;
+}
+
+#welcome .card-body {
+  flex: 1;
+  align-self: center;
+}
+
+#welcome .card-text {
+  font-size: 1.3rem;
+}
+
+#welcome .sorting-hat {
+  width: 40%;
+  height: 60%;
+}
