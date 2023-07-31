@@ -64,7 +64,7 @@ const sort = (e) => {
     crest: houses[randomHouse].imageUrl,
   };
 
-  students.push(newStudent);
+  students.unshift(newStudent);
   document.querySelector("form").reset();
   studentCard(students);
 };
@@ -80,7 +80,6 @@ const eventListeners = () => {
 
 const startApp = () => {
   welcomeMessage();
-  studentCard(students);
   eventListeners();
 };
 
