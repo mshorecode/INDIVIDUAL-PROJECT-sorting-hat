@@ -1,6 +1,6 @@
 import { students } from "../data/students.js";
 import { houses } from "../data/houses.js";
-// import { voldArmy } from '../data/vold.js';
+import { voldArmy } from "../data/vold.js";
 import { renderToDom } from "../utils/renderToDom.js";
 
 // ***** SORTING HAT WELCOME MESSAGE ***** //
@@ -43,12 +43,24 @@ const studentCard = (array) => {
         <img src=${student.crest} class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${student.name}</h5>
-          <a href="#" class="btn btn-primary">Expel</a>
+          <button type="click" class="btn btn-primary" id="expel--${student.id}">Expel</button>
         </div>
       </div>
       `;
   }
   renderToDom("#studentCards", domString);
+};
+
+const deathEater = (voldArmy) => {
+  const domString = `
+      <div class="card" id="death-eater" style="width: 18rem;">
+        <img src="../assets/images/deathEater.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+        <p class="card-text">Sadly, ${voldArmy.name} joined Voldermort's Death Eaters!</p>
+        </div>
+      </div>
+      `;
+  renderToDom("#deathEaters", domString)
 };
 
 // ***** NEW STUDENT & SORT ***** //
@@ -59,7 +71,7 @@ const sort = (e) => {
 
   const newStudent = {
     id: students.length + 1,
-    name: document.querySelector('input').value,
+    name: document.querySelector("input").value,
     house: houses[randomHouse].id,
     crest: houses[randomHouse].imageUrl,
   };
@@ -76,6 +88,18 @@ const eventListeners = () => {
   });
 
   document.querySelector("form").addEventListener("submit", sort);
+
+  document.querySelector("#sorting").addEventListener("click", (e) => {
+    if (e.target.id.includes("expel")) {
+      const [, int] = e.target.id.split("--");
+      const index = students.findIndex((student) => student.id === Number(int));
+      let expelledStudent = students.splice(index, 1)[0];
+      voldArmy.push(expelledStudent);
+      console.log(voldArmy);
+      studentCard(students);
+      deathEater(expelledStudent);
+    }
+  });
 };
 
 const startApp = () => {
