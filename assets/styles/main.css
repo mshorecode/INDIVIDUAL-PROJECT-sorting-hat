@@ -99,23 +99,27 @@ body {
 
 #sorting {
   display: flex;
-  /* justify-content: space-evenly; */
-  margin: 6rem 6rem;
+  margin: 8rem 8rem;
   gap: 4rem;
 }
 
 #studentCards {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  width: 55%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  width: 45%;
 }
 
-#voldArmy {
-  border: 1px solid white;
-  flex: 1
+#deathEaters {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
 }
 
 .card {
