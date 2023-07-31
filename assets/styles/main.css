@@ -94,3 +94,34 @@ body {
   background-color: #740002;
   color: #ffc500;
 }
+
+/* CARDS */
+
+#sorting {
+  display: flex;
+  /* justify-content: space-evenly; */
+  margin: 6rem 6rem;
+  gap: 4rem;
+}
+
+#studentCards {
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  width: 55%;
+}
+
+#voldArmy {
+  border: 1px solid white;
+  flex: 1
+}
+
+.card {
+  background-color: #3b3838;
+  border: none;
+  color: white;
+  font-weight: 600;
+  text-shadow: -2px 2px 2px black;
+}
