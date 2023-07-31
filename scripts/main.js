@@ -1,12 +1,11 @@
 const renderToDom = (divId, html) => {
   const targetedDiv = document.querySelector(divId);
   targetedDiv.innerHTML = html;
-}
+};
 
 // ***** SORTING HAT WELCOME MESSAGE ***** //
 const welcomeMessage = () => {
-  const domString = 
-  `
+  const domString = `
     <div class="card">
       <div class="card-body">
         <img class="sorting-hat" src="../assets/images/sorting_hat.png" alt="Sorting Hat - Harry Potter Sorting Hat Cartoon@seekpng.com">
@@ -17,31 +16,30 @@ const welcomeMessage = () => {
     </div>
   `;
 
-  renderToDom('#welcome', domString);
+  renderToDom("#welcome", domString);
 };
 
 // ***** RENDER FORM ***** //
 const form = () => {
-  let domString = '';
-  domString += 
-  `
+  let domString = "";
+  domString += `
+  <p id="form-label">Student:</p>
   <div class="col-sm-10">
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Student:</label>
-    <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+    <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
   </div>
-    <button type="submit" class="btn btn-primary sort-btn">Sort House</button>
+    <button type="submit" class="btn btn-primary sort-btn-2">Sort House</button>
   </div>
   `;
 
-  renderToDom('#form', domString)
-}
+  renderToDom("#form", domString);
+};
 
 // ***** EVENT LISTENERS ***** //
 const eventListeners = () => {
-  document.querySelector("#welcome-btn").addEventListener('click', () => {
+  document.querySelector("#welcome-btn").addEventListener("click", () => {
     form();
-  })
-}
+  });
+};
 
 const startApp = () => {
   welcomeMessage();
