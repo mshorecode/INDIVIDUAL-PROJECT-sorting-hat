@@ -8,7 +8,7 @@ const welcomeMessage = () => {
   const domString = `
     <div class="card" id="sortHat">
       <div class="card-body">
-        <img class="sorting-hat" src="../assets/images/sorting_hat.png" alt="Sorting Hat - Harry Potter Sorting Hat Cartoon@seekpng.com">
+        <img class="sorting-hat" src="../assets/images/sorting-hat.png" alt="Sorting Hat - Harry Potter Sorting Hat Cartoon@seekpng.com">
         <h2 class="card-title">Sorting Hat</h2>
         <p class="card-text">"There's nothing hidden in your head the Sorting Hat can't see, so click me and I will tell you where you ought to be."</p>
         <button id="welcome-btn" class="btn btn-primary sort-btn">Begin</button>
@@ -61,13 +61,13 @@ const studentCard = (array) => {
 const deathEater = (voldArmy) => {
   const domString = `
       <div class="card" id="death-eater" style="width: 18rem;">
-        <img src="../assets/images/dark-mark.png" class="card-img-top" alt="...">
+        <img src="../assets/images/voldermort.png" class="card-img-top" alt="...">
         <div class="card-body">
-        <p class="card-text death-card">Sadly, <b>${voldArmy.name}</b> now bears the Dark Mark!</p>
+        <p class="card-text death-card">Sadly, <b>${voldArmy.name}</b> is now loyal to Voldermort and bears the Dark Mark!</p>
         </div>
       </div>
       `;
-  renderToDom("#deathEaters", domString)
+  renderToDom("#deathEaters", domString);
 };
 
 // ***** FILTER BUTTONS ***** //
@@ -80,10 +80,10 @@ const filterBtn = () => {
     <button type="button" class="btn btn-warning btn-huff">Hufflepuff</button>
     <button type="button" class="btn btn-success btn-sly">Slytherin</button>
   </div> 
-  `
+  `;
 
-  renderToDom("#buttons", domString)
-}
+  renderToDom("#buttons", domString);
+};
 
 // ***** NEW STUDENT & SORT ***** //
 const sort = (e) => {
@@ -102,7 +102,6 @@ const sort = (e) => {
   document.querySelector("form").reset();
   filterBtn();
   studentCard(students);
-  
 };
 
 // ***** EVENT LISTENERS ***** //
