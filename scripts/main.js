@@ -6,7 +6,7 @@ import { renderToDom } from "../utils/renderToDom.js";
 // ***** SORTING HAT WELCOME MESSAGE ***** //
 const welcomeMessage = () => {
   const domString = `
-    <div class="card">
+    <div class="card" id="sortHat">
       <div class="card-body">
         <img class="sorting-hat" src="../assets/images/sorting_hat.png" alt="Sorting Hat - Harry Potter Sorting Hat Cartoon@seekpng.com">
         <h2 class="card-title">Sorting Hat</h2>
@@ -39,11 +39,18 @@ const studentCard = (array) => {
   let domString = "";
   for (const student of array) {
     domString += `
-      <div class="card" style="width: 18rem;">
-        <img src=${student.crest} class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">${student.name}</h5>
-          <button type="click" class="btn btn-primary" id="expel--${student.id}">Expel</button>
+      <div class="card mb-3" id="student" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src=${student.crest} class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${student.name}</h5>
+              <p class="card-text">${student.house}</p>
+              <button type="click" class="btn btn-primary sort-btn" id="expel--${student.id}">Expel</button>
+            </div>
+          </div>
         </div>
       </div>
       `;
@@ -54,14 +61,29 @@ const studentCard = (array) => {
 const deathEater = (voldArmy) => {
   const domString = `
       <div class="card" id="death-eater" style="width: 18rem;">
-        <img src="../assets/images/deathEater.webp" class="card-img-top" alt="...">
+        <img src="../assets/images/dark-mark.png" class="card-img-top" alt="...">
         <div class="card-body">
-        <p class="card-text">Sadly, ${voldArmy.name} joined Voldermort's Death Eaters!</p>
+        <p class="card-text death-card">Sadly, <b>${voldArmy.name}</b> now bears the Dark Mark!</p>
         </div>
       </div>
       `;
   renderToDom("#deathEaters", domString)
 };
+
+// ***** FILTER BUTTONS ***** //
+const filterBtn = () => {
+  const domString = `
+  <div id="filter-container">
+    <button type="button" class="btn btn-secondary">All</button>
+    <button type="button" class="btn btn-danger btn-gryff">Gryffindor</button>
+    <button type="button" class="btn btn-primary btn-raven">Ravenclaw</button>
+    <button type="button" class="btn btn-warning btn-huff">Hufflepuff</button>
+    <button type="button" class="btn btn-success btn-sly">Slytherin</button>
+  </div> 
+  `
+
+  renderToDom("#buttons", domString)
+}
 
 // ***** NEW STUDENT & SORT ***** //
 const sort = (e) => {
@@ -78,7 +100,9 @@ const sort = (e) => {
 
   students.unshift(newStudent);
   document.querySelector("form").reset();
+  filterBtn();
   studentCard(students);
+  
 };
 
 // ***** EVENT LISTENERS ***** //
@@ -95,7 +119,6 @@ const eventListeners = () => {
       const index = students.findIndex((student) => student.id === Number(int));
       let expelledStudent = students.splice(index, 1)[0];
       voldArmy.push(expelledStudent);
-      console.log(voldArmy);
       studentCard(students);
       deathEater(expelledStudent);
     }
