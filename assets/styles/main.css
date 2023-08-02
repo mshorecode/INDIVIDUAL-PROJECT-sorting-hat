@@ -9,7 +9,7 @@ body {
 
 /* WELCOME */
 
-#welcome .card {
+#sortHat {
   justify-content: center;
   align-items: center;
   border: none;
@@ -47,7 +47,7 @@ body {
 
 .sort-btn {
   background-color: #7f0909;
-  color: #ffc500;
+  color: #ffd800;
   font-weight: 600;
   padding: .6rem .6rem;
   border: none;
@@ -55,7 +55,7 @@ body {
 
 .sort-btn:hover {
   background-color: #740001;
-  color: #ffc500;
+  color: #ffd800;
 }
 
 /* FORM */
@@ -69,13 +69,13 @@ body {
 }
 
 .col-sm-10 {
-  width: 56%;
+  width: 25%;
   height: 100%;
 }
 
 #form-label {
   flex: 0;
-  color: #ffc500;
+  color: #ffd800;
   font-size: 1.2rem;
   font-weight: 600;
   text-shadow: -2px 2px 2px black;
@@ -84,7 +84,7 @@ body {
 
 .sort-btn-2 {
   background-color: #7f0909;
-  color: #ffc500;
+  color: #ffd800;
   font-weight: 600;
   border: none;
   padding: .30rem .52rem;
@@ -92,7 +92,13 @@ body {
 
 .sort-btn-2:hover {
   background-color: #740002;
-  color: #ffc500;
+  color: #ffd800;
+}
+
+#filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /* CARDS */
@@ -111,7 +117,7 @@ body {
   align-items: center;
   gap: 2rem;
   padding: 1.5rem;
-  width: 45%;
+  width: 50%;
 }
 
 #deathEaters {
@@ -119,13 +125,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 50%;
+  padding: 1rem;
 }
 
-.card {
+#student {
   background-color: #3b3838;
   border: none;
   color: white;
   font-weight: 600;
   text-shadow: -2px 2px 2px black;
+  width: 45%;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#death-eater {
+  background-color: #3b3838;
+  border: none;
+  color: white;
+  font-weight: 600;
+  text-shadow: -2px 2px 2px black;
+  width: 40%;
+}
+
+b {
+  font-style: italic;
+  color: #2E9841;
+}
+
+.death-card {
+  text-align: center;
+}
+
+.card-img-top {
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
