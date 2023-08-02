@@ -25,7 +25,7 @@ const form = () => {
   domString += `
   <p id="form-label">Student:</p>
   <div class="col-sm-10">
-    <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+    <input type="text" required="required" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter a name">
   </div>
     <button type="submit" class="btn btn-primary sort-btn-2" id="submit-btn">Sort House</button>
   </div>
@@ -73,16 +73,22 @@ const deathEater = (voldArmy) => {
 // ***** FILTER BUTTONS ***** //
 const filterBtn = () => {
   const domString = `
-  <div id="filter-container">
-    <button type="button" class="btn btn-secondary">All</button>
-    <button type="button" class="btn btn-danger btn-gryff">Gryffindor</button>
-    <button type="button" class="btn btn-primary btn-raven">Ravenclaw</button>
-    <button type="button" class="btn btn-warning btn-huff">Hufflepuff</button>
-    <button type="button" class="btn btn-success btn-sly">Slytherin</button>
+  <div id="filterContainer">
+    <button type="button" class="btn btn-secondary all-btn">All</button>
+    <button type="button" class="btn btn-danger" id="gryff">Gryffindor</button>
+    <button type="button" class="btn btn-primary" id="raven">Ravenclaw</button>
+    <button type="button" class="btn btn-warning" id="huff">Hufflepuff</button>
+    <button type="button" class="btn btn-success" id="sly">Slytherin</button>
   </div> 
   `;
 
   renderToDom("#buttons", domString);
+};
+
+// ***** FILTER FUNCTIONALITY ***** //
+const filterHouse = (name) => {
+  const filteredHouses = students.filter((student) => student.house === name);
+  studentCard(filteredHouses);
 };
 
 // ***** NEW STUDENT & SORT ***** //
@@ -96,6 +102,7 @@ const sort = (e) => {
     name: document.querySelector("input").value,
     house: houses[randomHouse].id,
     crest: houses[randomHouse].imageUrl,
+    expelled: false,
   };
 
   students.unshift(newStudent);
@@ -111,6 +118,27 @@ const eventListeners = () => {
   });
 
   document.querySelector("form").addEventListener("submit", sort);
+
+  document.querySelector("#buttons").addEventListener("click", (e) => {
+    
+    switch (e.target.id) {
+      case "gryff":
+        filterHouse("Gryffindor");
+        break;
+      case "raven":
+        filterHouse("Ravenclaw");
+        break;
+      case "huff":
+        filterHouse("Hufflepuff");
+        break;
+      case "sly":
+        filterHouse("Slytherin");
+        break;
+      default:
+        studentCard(students);
+        break;
+    }
+  });
 
   document.querySelector("#sorting").addEventListener("click", (e) => {
     if (e.target.id.includes("expel")) {

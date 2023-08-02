@@ -95,7 +95,7 @@ body {
   color: #ffd800;
 }
 
-#filter-container {
+#filterContainer {
   display: flex;
   justify-content: center;
   gap: 1rem;
