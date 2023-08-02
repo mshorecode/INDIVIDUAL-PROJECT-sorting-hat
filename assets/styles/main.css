@@ -105,7 +105,8 @@ body {
 
 #sorting {
   display: flex;
-  margin: 8rem 8rem;
+  justify-content: space-evenly;
+  margin: 4rem 6rem;
   gap: 4rem;
 }
 
@@ -115,7 +116,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  /* gap: 2rem; */
   padding: 1.5rem;
   width: 50%;
 }
@@ -123,10 +124,11 @@ body {
 #deathEaters {
   /* border: 1px solid white; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 50%;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 #student {
@@ -135,7 +137,6 @@ body {
   color: white;
   font-weight: 600;
   text-shadow: -2px 2px 2px black;
-  width: 45%;
 }
 
 .card-text {
