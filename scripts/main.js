@@ -8,7 +8,7 @@ const welcomeMessage = () => {
   const domString = `
     <div class="card" id="sortHat">
       <div class="card-body">
-        <img class="sorting-hat" src="../assets/images/sorting-hat.png" alt="Sorting Hat - Harry Potter Sorting Hat Cartoon@seekpng.com">
+        <img class="sorting-hat" src="../assets/images/sorting-hat.png" alt="The Sorting Hat from Harry Potter">
         <h2 class="card-title">Sorting Hat</h2>
         <p class="card-text">"There's nothing hidden in your head the Sorting Hat can't see, so click me and I will tell you where you ought to be."</p>
         <button id="welcome-btn" class="btn btn-primary sort-btn">Begin</button>
@@ -58,16 +58,26 @@ const studentCard = (array) => {
   renderToDom("#studentCards", domString);
 };
 
-const deathEater = (voldArmy) => {
-  const domString = `
-      <div class="card" id="death-eater" style="width: 18rem;">
-        <img src="../assets/images/voldermort.png" class="card-img-top" alt="...">
-        <div class="card-body">
-        <p class="card-text death-card">Sadly, <b>${voldArmy.name}</b> is now loyal to Voldermort and bears the Dark Mark!</p>
+const deathEater = (array) => {
+  let domString = "";
+  for (const student of array) {
+    domString += `
+      <div class="card mb-3" id="student" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../assets/images/deathEater.webp" class="img-fluid rounded-start" alt="Image of Voldermort and his Death Eaters">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${student.name}</h5>
+              <p class="card-text">Death Eaters</p>
+            </div>
+          </div>
         </div>
       </div>
       `;
-  renderToDom("#deathEaters", domString);
+  }
+   renderToDom("#deathEaters", domString);
 };
 
 // ***** FILTER BUTTONS ***** //
@@ -105,7 +115,7 @@ const sort = (e) => {
     expelled: false,
   };
 
-  students.unshift(newStudent);
+  students.push(newStudent);
   document.querySelector("form").reset();
   filterBtn();
   studentCard(students);
@@ -120,7 +130,6 @@ const eventListeners = () => {
   document.querySelector("form").addEventListener("submit", sort);
 
   document.querySelector("#buttons").addEventListener("click", (e) => {
-    
     switch (e.target.id) {
       case "gryff":
         filterHouse("Gryffindor");
@@ -147,7 +156,7 @@ const eventListeners = () => {
       let expelledStudent = students.splice(index, 1)[0];
       voldArmy.push(expelledStudent);
       studentCard(students);
-      deathEater(expelledStudent);
+      deathEater(voldArmy);
     }
   });
 };
