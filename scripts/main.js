@@ -23,12 +23,12 @@ const welcomeMessage = () => {
 const form = () => {
   let domString = "";
   domString += `
-  <p id="form-label">Student:</p>
-  <div class="col-sm-10">
-    <input type="text" required="required" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter a name">
-  </div>
+    <p id="form-label">Student:</p>
+    <div class="col-sm-10">
+      <input type="text" required="required" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter a name">
+    </div>
     <button type="submit" class="btn btn-primary sort-btn-2" id="submit-btn">Sort House</button>
-  </div>
+    </div>
   `;
 
   renderToDom("#form", domString);
