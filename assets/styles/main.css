@@ -17,6 +17,10 @@ body {
   color: white;
 }
 
+#welcome-button {
+  background-color: #3b3838;  
+}
+
 #welcome .sorting-hat {
   width: 40%;
   height: 60%;
@@ -99,7 +103,6 @@ body {
 .sort-btn-2:hover {
   background-color: #3b3838;
   color: #ffd800;
-  font-size: 1.2rem;
 }
 
 #filterContainer {
@@ -189,6 +192,4 @@ b {
 .house:hover {
   background-color: #3b3838;
   color: white;
-  border-bottom: 2px solid white;
-  border-radius: 0px;
 }

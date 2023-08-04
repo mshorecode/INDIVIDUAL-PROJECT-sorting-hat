@@ -8,7 +8,7 @@ const welcomeMessage = () => {
   const domString = `
     <div class="card" id="sortHat">
       <div class="card-body">
-        <button id="welcome-btn" class="btn btn-primary sort-btn">
+        <button id="welcome-btn" class=" btn-primary sort-btn">
           <img class="sorting-hat" src="../assets/images/sorting-hat.png" alt="The Sorting Hat from Harry Potter">
         </button>
         <h2 class="card-title">Sorting Hat</h2>
@@ -28,7 +28,7 @@ const form = () => {
     <div class="col-sm-10">
       <input type="text" required="required" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter a name">
     </div>
-    <button type="submit" class="btn btn-primary sort-btn-2" id="submit-btn">Sort</button>
+    <button type="submit" class="btn sort-btn-2" id="submit-btn">Sort</button>
     </div>
   `;
 
@@ -49,7 +49,7 @@ const studentCard = (array) => {
             <div class="card-body">
               <h5 class="card-title">${student.name}</h5>
               <p class="card-text">${student.house}</p>
-              <button type="click" class="btn btn-primary sort-btn" id="expel--${student.id}">Expel</button>
+              <button type="click" class="btn sort-btn" id="expel--${student.id}">Expel</button>
             </div>
           </div>
         </div>
@@ -85,11 +85,11 @@ const deathEater = (array) => {
 const filterBtn = () => {
   const domString = `
   <div id="filterContainer">
-    <button type="button" class="house btn btn-secondary all-btn">All</button>
-    <button type="button" class="house btn btn-danger" id="gryff">Gryffindor</button>
-    <button type="button" class="house btn btn-primary" id="raven">Ravenclaw</button>
-    <button type="button" class="house btn btn-warning" id="huff">Hufflepuff</button>
-    <button type="button" class="house btn btn-success" id="sly">Slytherin</button>
+    <button type="button" class="house btn all-btn">All</button>
+    <button type="button" class="house btn" id="gryff">Gryffindor</button>
+    <button type="button" class="house btn" id="raven">Ravenclaw</button>
+    <button type="button" class="house btn" id="huff">Hufflepuff</button>
+    <button type="button" class="house btn" id="sly">Slytherin</button>
   </div> 
   `;
 
@@ -113,7 +113,6 @@ const sort = (e) => {
     name: document.querySelector("input").value,
     house: houses[randomHouse].id,
     crest: houses[randomHouse].imageUrl,
-    expelled: false,
   };
 
   students.push(newStudent);
