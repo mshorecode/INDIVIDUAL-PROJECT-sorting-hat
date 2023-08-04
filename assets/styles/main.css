@@ -1,10 +1,10 @@
-@font-face {
-  font-family: Magic School;
-  src: url('../fonts/magicSchoolOne.ttf');
+* {
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 body {
   background-color: #3b3838;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* WELCOME */
@@ -16,6 +16,10 @@ body {
   margin: 20px 0;
   background-color: #3b3838;
   color: white;
+}
+
+#welcome-button {
+  background-color: #3b3838;  
 }
 
 #welcome .sorting-hat {
@@ -33,8 +37,8 @@ body {
 #welcome .card-title {
   padding: .4rem 0 .8rem 0; 
   border-bottom: 1px solid white;
-  text-shadow: -2px 2px 2px black;
-  font-family: 'Magic School', cursive;
+  text-shadow: -3px 4px 3px black;
+  font-family: 'Henny Penny', cursive;
   font-size: 3rem;
 }
 
@@ -46,16 +50,9 @@ body {
 }
 
 .sort-btn {
-  background-color: #7f0909;
+  background-color: #3b3838;
   color: #ffd800;
-  font-weight: 600;
-  padding: .6rem .6rem;
   border: none;
-}
-
-.sort-btn:hover {
-  background-color: #740001;
-  color: #ffd800;
 }
 
 /* FORM */
@@ -77,21 +74,25 @@ body {
   flex: 0;
   color: #ffd800;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
   text-shadow: -2px 2px 2px black;
   margin: 0; 
+  font-family: 'Henny Penny', cursive;
+  font-size: 1.4rem;
 }
 
 .sort-btn-2 {
-  background-color: #7f0909;
+  background-color: #3b3838;
   color: #ffd800;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Rubik', sans-serif;
+  text-shadow: -2px 2px 2px black;
   border: none;
   padding: .30rem .52rem;
 }
 
 .sort-btn-2:hover {
-  background-color: #740002;
+  background-color: #3b3838;
   color: #ffd800;
 }
 
@@ -111,18 +112,15 @@ body {
 }
 
 #studentCards {
-  /* border: 1px solid white; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* gap: 2rem; */
   padding: 1.5rem;
   width: 50%;
 }
 
 #deathEaters {
-  /* border: 1px solid white; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -162,7 +160,31 @@ b {
   text-align: center;
 }
 
-.card-img-top {
+#voldermort {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
+}
+
+.img-fluid {
+  filter: drop-shadow(-20px 10px 4px black)
+}
+
+.col-md-8 {
+  align-self: center;
+}
+
+/* BUTTONS */
+
+.house {
+  background-color: #3b3838;
+  border: 0px solid #3b3838;
+  color: white;
+  font-family: 'Henny Penny', cursive;
+  font-size: 1.5rem;
+  text-shadow: -2px 2px 2px black;
+}
+
+.house:hover {
+  background-color: #3b3838;
+  color: white;
 }
