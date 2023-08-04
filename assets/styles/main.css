@@ -4,7 +4,7 @@
 
 body {
   background-color: #3b3838;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Lakki Reddy', cursive;
 }
 
 /* WELCOME */
@@ -38,7 +38,7 @@ body {
   padding: .4rem 0 .8rem 0; 
   border-bottom: 1px solid white;
   text-shadow: -3px 4px 3px black;
-  font-family: 'Henny Penny', cursive;
+  font-family: 'Lakki Reddy', cursive;
   font-size: 3rem;
 }
 
@@ -76,8 +76,9 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
   text-shadow: -2px 2px 2px black;
-  margin: 0; 
-  font-family: 'Henny Penny', cursive;
+  margin: 0;
+  padding-top: 0.5rem;
+  font-family: 'Lakki Reddy', cursive;
   font-size: 1.4rem;
 }
 
@@ -85,7 +86,7 @@ body {
   background-color: #3b3838;
   color: #ffd800;
   font-weight: 400;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Lakki Reddy', cursive;
   text-shadow: -2px 2px 2px black;
   border: none;
   padding: .30rem .52rem;
@@ -140,6 +141,8 @@ body {
 .card-text {
   font-size: 1.2rem;
   font-weight: 400;
+  font-family: 'Lakki Reddy', cursive;
+  padding-top: 1rem;
 }
 
 #death-eater {
@@ -173,13 +176,17 @@ b {
   align-self: center;
 }
 
+.card-title {
+  font-size: 1.6rem;
+}
+
 /* BUTTONS */
 
 .house {
   background-color: #3b3838;
   border: 0px solid #3b3838;
   color: white;
-  font-family: 'Henny Penny', cursive;
+  font-family: 'Lakki Reddy', cursive;
   font-size: 1.5rem;
   text-shadow: -2px 2px 2px black;
 }
