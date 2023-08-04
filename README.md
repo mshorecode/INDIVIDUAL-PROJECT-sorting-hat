@@ -14,7 +14,15 @@ Sorting Hat is an application that will let you and your friends find out which 
 - When you press **Expel** on a student card it removes that student from the student container and puts it into the Death Eaters container.
 
 ## Video Walkthrough of Sorting Hat <!-- A loom link is sufficient -->
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/1dbc3997e22f4c16beb4bb775bcdbcc7?sid=91fa19f5-7b25-4385-83b0-fc228bf8f736" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div>
+  <a href="https://www.loom.com/share/1dbc3997e22f4c16beb4bb775bcdbcc7">
+    <p>Sorting Hat Application 🧙‍♂️ - Watch Video</p>
+  </a>
+  <a href="https://www.loom.com/share/1dbc3997e22f4c16beb4bb775bcdbcc7">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/1dbc3997e22f4c16beb4bb775bcdbcc7-with-play.gif">
+  </a>
+</div>
+
 
 
 
