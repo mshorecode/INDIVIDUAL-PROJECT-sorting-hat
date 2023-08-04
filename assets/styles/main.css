@@ -66,8 +66,12 @@ body {
 }
 
 .col-sm-10 {
-  width: 25%;
+  width: 20%;
   height: 100%;
+}
+
+#colFormLabelSm {
+  font-family: 'Rubik', sans-serif;
 }
 
 #form-label {
@@ -89,7 +93,6 @@ body {
   font-family: 'Lakki Reddy', cursive;
   text-shadow: -2px 2px 2px black;
   border: none;
-  padding: .30rem .52rem;
 }
 
 .sort-btn-2:hover {
