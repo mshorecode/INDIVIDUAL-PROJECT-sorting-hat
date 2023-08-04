@@ -4,6 +4,7 @@
 
 body {
   background-color: #3b3838;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* WELCOME */
@@ -51,17 +52,7 @@ body {
 .sort-btn {
   background-color: #3b3838;
   color: #ffd800;
-  font-weight: 600;
-  font-family: 'Henny Penny', cursive;
-  text-shadow: -2px 2px 2px black;
-  padding: .6rem .6rem;
   border: none;
-}
-
-.sort-btn:hover {
-  background-color: #3b3838;
-  color: #ffd800;
-  font-size: 1.2rem;
 }
 
 /* FORM */
@@ -93,8 +84,8 @@ body {
 .sort-btn-2 {
   background-color: #3b3838;
   color: #ffd800;
-  font-weight: 600;
-  font-family: 'Henny Penny', cursive;
+  font-weight: 400;
+  font-family: 'Rubik', sans-serif;
   text-shadow: -2px 2px 2px black;
   border: none;
   padding: .30rem .52rem;
@@ -176,6 +167,10 @@ b {
 
 .img-fluid {
   filter: drop-shadow(-20px 10px 4px black)
+}
+
+.col-md-8 {
+  align-self: center;
 }
 
 /* BUTTONS */

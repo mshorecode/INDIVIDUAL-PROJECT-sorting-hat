@@ -16,5 +16,5 @@ export const students = [
     name: 'Ron Weasley',
     house: 'Gryffindor',
     crest: '../assets/images/gryffindor.webp',
-  }
+  },
 ]
